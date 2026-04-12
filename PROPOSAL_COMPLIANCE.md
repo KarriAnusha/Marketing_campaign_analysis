@@ -13,21 +13,18 @@
 
 ## EDA / Segmentation
 - Rule-based segmentation: complete
-- Segment summary outputs: complete
-- KPI-ready exports for dashboard: complete
+- Segment summary support: complete
+- Dashboard-ready filtered analysis outputs: complete
 
 ## SQL
 - Customer table schema: complete
-- Load cleaned data into SQL: complete
-- KPI queries: complete
-- Segment-level summaries: complete
-- Views for required business questions: complete
+- Analytical queries and views: complete
+- KPI, segment, spending, channel, under-served, and ideal-target analysis support: complete
 
 ## Dashboard
-- Power BI-ready dataset package: complete
-- Power BI page specification: complete
-- Required slicer fields prepared: complete
-- Native `.pbix` artifact generated: not possible in this environment because Power BI Desktop tooling was unavailable
+- Streamlit dashboard: complete
+- Interactive filters for `Country`, `Education`, `Marital_Status`, `Age_Band`, `Income_Band`: complete
+- Visual coverage for required business questions: complete
 
 ## Documentation
 - README: complete

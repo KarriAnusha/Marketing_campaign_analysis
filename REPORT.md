@@ -1,14 +1,14 @@
 # Marketing Campaign Analysis Report
 
 ## Problem understanding
-The objective is to identify the most valuable and most responsive customer segments, understand spending and channel behavior, and support future targeting decisions with a dashboard and SQL-backed analytics layer.
+The objective is to identify the most valuable and most responsive customer segments, analyze spending and channel behavior, and present the findings in an interactive Streamlit dashboard.
 
 ## Data preparation
 - Loaded `marketing_data.csv`
-- Validated fields against `marketing_data_dictionary.csv`
-- Converted `Dt_Customer` to date
-- Handled invalid or missing values in `Income`, `Recency`, and usage metrics
-- Derived:
+- validated columns using `marketing_data_dictionary.csv`
+- converted `Dt_Customer` to date
+- handled missing and invalid values in `Income`, `Recency`, and usage fields
+- derived:
   - `Age`
   - `Customer_Tenure_Days`
   - `Customer_Tenure_Months`
@@ -17,13 +17,41 @@ The objective is to identify the most valuable and most responsive customer segm
   - `Children`
   - `Income_Band`
   - `Age_Band`
-- Applied rule-based segments:
+- implemented rule-based segments:
   - High Income
   - Young Customer
   - Campaign Responder
   - High Web Engagement
   - Family Customer
   - High Spender
+
+## SQL deliverables
+- main customer schema in [marketing_schema.sql](C:\Users\Anusha\Desktop\marketing-campaign-analysis-dashboard\sql\marketing_schema.sql)
+- analytical queries in [SQL_QUERIES.sql](C:\Users\Anusha\Desktop\marketing-campaign-analysis-dashboard\SQL_QUERIES.sql)
+- views supporting:
+  - KPI summaries
+  - segment response analysis
+  - spending by demographic lens
+  - high-value channel usage
+  - under-served segments
+  - ideal target customer profiles
+
+## Dashboard deliverable
+The dashboard deliverable is the Streamlit app in [streamlit_app.py](C:\Users\Anusha\Desktop\marketing-campaign-analysis-dashboard\streamlit_app.py).
+
+It includes:
+- KPI cards
+- campaign response analysis by segment
+- product spending analysis by age, income, marital status, and country
+- channel usage analysis for high-value customers
+- under-served segment analysis
+- ideal target customer profiling
+- interactive filters for:
+  - Country
+  - Education
+  - Marital_Status
+  - Age_Band
+  - Income_Band
 
 ## KPI summary
 - Total customers: `56,000`
@@ -33,42 +61,16 @@ The objective is to identify the most valuable and most responsive customer segm
 - Average web visits per month: `5.17`
 - Average total purchases: `13.24`
 
-## Most valuable and responsive segments
-- `Campaign Responder`
-  - Response rate: `100.00%`
-  - Avg total spend: `688.25`
-- `High Income`
-  - Response rate: `23.54%`
-  - Avg total spend: `1,038.03`
-- `High Spender`
-  - Avg total spend: `1,922.04`
-  - Very small segment and low current response in the primary-segment assignment output
-
-## Required business questions covered
-- Highest response rate by segment and by campaign:
-  - `segment_campaign_response` view
-- Spending patterns across products by age, income, marital status, and country:
-  - `spending_by_demographics` view
-- Channel usage by high-value customers:
-  - `channel_usage_high_value` view
-- Under-served segments:
-  - `underserved_segments` view
-- Characteristics of ideal target customers:
-  - `ideal_target_customers` view
+## Key findings
+- `High Income` customers are the strongest scalable response segment.
+- `High Spender` customers contribute the highest spend intensity.
+- `High Web Engagement` and under-served customers show conversion opportunity.
+- Wines and meat remain the strongest spend categories.
 
 ## Actionable recommendations
-1. Prioritize `High Income` customers for future campaigns because they combine strong spend with the highest scalable response rate.
-2. Retarget `Campaign Responders` with follow-up offers and loyalty journeys because they already demonstrate clear acceptance behavior.
-3. Focus conversion programs on `High Web Engagement` and `Under_Served_Customer` groups because they visit often but underperform on spend or response.
-4. Use product-led targeting around wines and meat for higher-value audiences, since spend concentration is strongest in those categories.
-5. Add country, age band, and income band targeting in campaign planning because those dimensions are now available directly in the analytics layer.
-6. Use the `ideal_target_customers` output as the shortlist for future campaign audience design.
-
-## Deliverables status
-- Python cleaning and feature engineering: complete
-- SQL schema and analytical queries: complete
-- Power BI-ready dashboard data package: complete
-- Project report: complete
-
-## Limitation
-A native `.pbix` file was not generated in this environment because Power BI Desktop was not available to automate report creation. The Power BI-ready exported datasets and dashboard specification are included for direct use in Power BI Desktop.
+1. Prioritize high-income segments for future campaigns because they combine stronger response and stronger spend.
+2. Retarget campaign responders with personalized follow-up campaigns.
+3. Focus web-conversion improvements on high-visit, low-response customer groups.
+4. Lead premium offers with high-performing product categories such as wines and meat.
+5. Use age band, income band, marital status, and country as primary targeting lenses.
+6. Use the ideal target customer profile outputs to shortlist future campaign audiences.
