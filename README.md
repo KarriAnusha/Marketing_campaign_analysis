@@ -58,4 +58,4 @@ Install from:
 
 ## Notes
 - The SQL layer is retained because it is part of the proposal deliverables.
-- The dashboard deliverable is now Streamlit rather than Power BI, which remains proposal-compliant because the proposal allows either Streamlit or Power BI.
+- The dashboard deliverable is Streamlit.
