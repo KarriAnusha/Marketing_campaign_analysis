@@ -38,8 +38,9 @@ This project is aligned to the `Marketing campaign analysis` proposal in Marketi
 - `Under_Served_Customer`
 
 ## Run order
-1. `python data_processing.py`
-2. `streamlit run streamlit_app.py`
+1. `pip install -r requirements.txt`
+2. `python data_processing.py`
+3. `streamlit run streamlit_app.py`
 
 ## Dashboard coverage
 The Streamlit dashboard includes:
