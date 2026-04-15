@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 PROJECT_DIR = Path(__file__).resolve().parent
-CLEANED_FILE = PROJECT_DIR / "cleaned_marketing_data.csv"
+CLEANED_FILE = PROJECT_DIR / "data" / "processed" / "cleaned_marketing_data.csv"
 SCHEMA_FILE = PROJECT_DIR / "sql" / "marketing_schema.sql"
 DB_FILE = PROJECT_DIR / "marketing_campaign_analysis.db"
 

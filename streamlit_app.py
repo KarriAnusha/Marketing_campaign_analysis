@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 
 PROJECT_DIR = Path(__file__).resolve().parent
-DATA_FILE = PROJECT_DIR / "cleaned_marketing_data.csv"
+DATA_FILE = PROJECT_DIR / "data" / "processed" / "cleaned_marketing_data.csv"
 
 SPEND_COLUMNS = {
     "MntWines": "Wines",

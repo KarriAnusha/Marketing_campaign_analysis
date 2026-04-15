@@ -6,9 +6,9 @@ import numpy as np
 import pandas as pd
 
 PROJECT_DIR = Path(__file__).resolve().parent
-DATA_FILE = PROJECT_DIR / "marketing_data.csv"
-DICTIONARY_FILE = PROJECT_DIR / "marketing_data_dictionary.csv"
-CLEANED_FILE = PROJECT_DIR / "cleaned_marketing_data.csv"
+DATA_FILE = PROJECT_DIR / "data" / "raw" / "marketing_data.csv"
+DICTIONARY_FILE = PROJECT_DIR / "data" / "raw" / "marketing_data_dictionary.csv"
+CLEANED_FILE = PROJECT_DIR / "data" / "processed" / "cleaned_marketing_data.csv"
 
 REFERENCE_DATE = pd.Timestamp("2015-01-01")
 SPEND_COLUMNS = [
