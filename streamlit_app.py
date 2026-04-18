@@ -39,6 +39,17 @@ st.set_page_config(
     layout="wide",
 )
 
+# Open Graph meta tags for LinkedIn / social media link previews
+st.markdown(
+    """
+    <meta property="og:title" content="Marketing Campaign Analysis Dashboard" />
+    <meta property="og:description" content="Interactive analytics dashboard exploring customer segments, campaign responses, spending patterns, and channel usage for a retail marketing dataset." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marketingcampaignanalysis-9fkafd6cmegem8qmdpr5ec.streamlit.app/" />
+    """,
+    unsafe_allow_html=True,
+)
+
 
 def load_data() -> pd.DataFrame:
     df = pd.read_csv(DATA_FILE)
